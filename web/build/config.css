@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --light_blue: #93B7BE;
+    --mint_cream: #F1FFFA;
+    --gunmetal: #1B2432;
+    --rich_black: #121420;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 150px;
+    background-color: var(--rich_black);
+    color: white;
+
+    #cim{
+        font-size: 1.5rem;
+    }
+
+    #elemek{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .elem{
+            background-color: var(--rich_black);
+            font-size: var(--nav_items);
+            width: 7vw;
+            height: 4vh;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .elem:hover{
+            box-shadow: 0px 0px 10px var(--mint_cream);
+        }
+    }
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    padding: 0 80px;
+}
+
+.components{
+    padding: 0 20px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.conf-block{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.conf-block:last-child{
+    border-bottom: none;
+}
+
+.conf-block-01{
+  width: 200px;
+}
+
+.add-comp{
+    position: relative;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CCD99;
+    background-color: transparent;
+    border: 1px solid #4CCD99;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.add-comp::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4CCD99;
+    z-index: -1;
+    transition: top 0.2s ease;
+}
+
+.add-comp:hover::before {
+    top: 0; /* Mozgás alulról felfelé */
+  }
+  
+.add-comp:hover {
+    color: #fff; /* Biztosítsd, hogy a szöveg látható maradjon */
+  }

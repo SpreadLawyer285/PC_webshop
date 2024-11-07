@@ -1,0 +1,6 @@
+cpu;Intel Core i5;45000;4 cores, 8 threads
+cpu;AMD Ryzen 5 5600X;70000;6 cores, 12 threads
+gpu;NVIDIA GTX 1660;90000;6GB GDDR5
+gpu;AMD RX 6700 XT;140000;12GB GDDR6
+ssd;Samsung EVO 970;35000;500GB, NVMe
+ssd;WD Blue SN570;28000;500GB, NVMe
