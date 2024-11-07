@@ -3,6 +3,7 @@ body{
     margin: 0;
     width: 100%;
     height: 100%;
+    background-color: var(--rich_black);
 }
 
 *{
@@ -10,23 +11,41 @@ body{
     padding: 0;
 }
 
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInHr{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+        border: 2px solid var(--mint_cream);
+        border-radius: 5px;
+    }
+}
+
 :root{
     --light_blue: #93B7BE;
     --mint_cream: #F1FFFA;
     --gunmetal: #1B2432;
     --rich_black: #121420;
+    --nav: rgb(36, 34, 61);
 
-    --title_size: 2rem;
+    --title_size: 2.7rem;
     --nav_items: 1.4rem; 
-}
-
-@keyframes nav_border{
-    from{
-        box-shadow: var(--rich_black);
-    }
-    to{
-        box-shadow: var(--mint_cream);
-    }
+    --leiras: 1.5rem;
+    --text_size: 1.2rem;
 }
 
 nav{
@@ -35,8 +54,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0px 150px;
-    background-color: var(--rich_black);
+    background-color: var(--nav);
     color: white;
+    animation: slideIn 0.8s;
 
     #cim{
         font-size: 1.5rem;
@@ -49,7 +69,7 @@ nav{
         gap: 30px;
 
         .elem{
-            background-color: var(--rich_black);
+            background-color: var(--nav);
             font-size: var(--nav_items);
             width: 7vw;
             height: 4vh;
@@ -57,10 +77,12 @@ nav{
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: 0.5s;
         }
 
         .elem:hover{
-            box-shadow: 0px 0px 10px var(--mint_cream);
+            transition: 0.5s;
+            box-shadow: 0px 0px 20px var(--mint_cream);
         }
     }
 }
@@ -75,7 +97,38 @@ header{
     height: 70vh;
     background-color: var(--rich_black);
     display: grid;
-    grid-template-columns: 1fr 30vw 50vw 1fr;
-    grid-template-rows: 1fr 20vh 3vh 35vh 1fr;
+    grid-template-columns: 1fr 30vw 1fr 40vw 1fr;
+    grid-template-rows: 1fr 30vh 2vh 20vh 1fr;
     column-gap: 20px;
+    animation: slideIn 0.8s;
+
+    hr{
+        grid-column: 2;
+        grid-row: 3;
+        border: 2px solid var(--rich_black);
+        border-radius: 5px;
+        animation: slideInHr 0.8s forwards;
+        animation-delay: 0.8s;
+    }
+    #kep{
+        grid-column: 4;
+        grid-row: 2 / 5;
+        background-color: var(--mint_cream);
+        border-radius: 20px;
+    }
+
+    #cim{
+        grid-column: 2;
+        grid-row: 2;
+        color: white;
+        font-size: var(--title_size);
+    }
+
+    #text{
+        grid-column: 2;
+        grid-row: 4;
+        color: white;
+        font-size: var(--leiras);
+        text-align: justify;
+    }
 }
