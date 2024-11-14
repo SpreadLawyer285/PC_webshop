@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -28,43 +29,55 @@
     <main>
     <h1>Gépösszerakó</h1>
     <section class="components">
+        <h3>Komponensek</h3>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Alaplap</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Alaplap')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Processzor</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('CPU')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Memória</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Memoria')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Videókártya</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('GPU')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>HDD</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('HDD')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>SSD</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('SSD')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Monitor</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Monitor')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Egér</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Eger')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Billentyűzet</h1></div>
-            <div class="conf-block-02"><button class="add-comp">Hozzáadás</button></div>
+            <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Billentyuzet')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
         </div>
     </section>
-    </main>                                          
+    </main>       
+    
+    <div id="modal" >
+        <div class="top">
+            <h2 id="modal-title"></h2>
+            <button onclick="closeModal()"><i class="fa-solid fa-close"></i></button>
+        </div>
+        <ul id="options-list"></ul>
+        
+      </div>
+      
+    <script src="script.js"></script>
 </body>
 </html>
