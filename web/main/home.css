@@ -180,7 +180,7 @@ main{
         align-items: center;
         flex-direction: column;
         border: none;
-        scale: 0.8;
+        scale: 0.9;
         opacity: 0;
         animation: fade-in linear forwards;
         animation-timeline: view();

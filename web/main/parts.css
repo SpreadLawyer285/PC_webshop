@@ -11,6 +11,10 @@ body{
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 @keyframes slideIn{
     from{
         opacity: 0;
@@ -78,6 +82,7 @@ body{
     --gunmetal: #1B2432;
     --rich_black: #121420;
     --nav: rgb(36, 34, 61);
+    --box_shadow: rgb(78, 29, 170);
 
     --title_size: 2rem;
     --nav_items: 1.4rem; 
@@ -90,7 +95,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 150px;
+    padding: 0px 50px;
     background-color: var(--nav);
     color: white;
     animation: slideIn 0.8s;
@@ -159,7 +164,7 @@ main{
     
                 a:hover{
                     color: var(--light_blue);
-                    transition-duration: 0.15s;
+                    transition-duration: 0.3s;
                 }
             }
         }
@@ -168,13 +173,37 @@ main{
     #alkatreszek{
         width: 100%;
         height: 100%;
-        background-color: var(--gunmetal);
+        background-color: var(--rich_black);
         overflow-x: scroll;
-    
+        scroll-behavior: smooth;
+        
+        hr{
+            border: 3px solid var(--rich_black);
+            border-radius: 50px;
+        }
+
         .alkatresz{
             width: 100%;
-            height: 20vh;
-            background-color: var(--mint_cream);
+            height: 220vh;
+            background-color: var(--rich_black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 100px;
+            
+            div{
+                width: 90%;
+                height: 40vh;
+                background-color: var(--mint_cream);
+                border-radius: 30px;
+                box-shadow: 10px 10px 1px var(--box_shadow);
+            }
+        }
+
+        .alkatresz:last-child{
+            margin-bottom: 0;
         }
     }
 }
