@@ -9,15 +9,12 @@
 </head>
 <body>
     <nav>
-        <div id="cim">
+        <div id="cim" onclick="window.location.href='parts.html'">
             <h2>Build it!</h2>
         </div>
         <div id="elemek">
             <div class="elem">
-                <a href="#">Build one</a>
-            </div>
-            <div class="elem">
-                <a href="#">Hardwares</a>
+                <a href="#build">Build one</a>
             </div>
         </div>
     </nav>
@@ -33,7 +30,27 @@
         <div id="text">
             We're here to help you building your first personal computer. You can choose from many components, and build the pc you've been dreaming of. If i got your attention, please take a look at our website! 
         </div>
-        <div id="kep"></div>
+        <div id="kep">
+            <video src="kepek/463ae6cf-96f5-4d7a-9c9a-ee95d23fb455_wm.mp4" width="150%" height="auto" autoplay muted loop></video>
+        </div>
     </header>
+
+    <main>
+        <button id="build" onclick="window.location.href='pc_webshop\PC_webshop-1\web\build/config.html'">
+            <h3>
+                Build your own pc here
+            </h3>
+        </button>
+        <button id="parts" onclick="window.location.href='parts.html'">
+            <h3>
+                Buy parts here
+            </h3>
+        </button>
+    </main>
+    <footer>
+        <p>buildyourpc@webshop.net</p>
+        <p>+72908123318</p>
+        <p>@ 2024 <i>custom pc_builds</i></p>
+    </footer>
 </body>
 </html>
