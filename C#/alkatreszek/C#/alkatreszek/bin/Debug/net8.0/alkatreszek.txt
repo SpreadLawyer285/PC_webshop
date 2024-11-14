@@ -1,0 +1,6 @@
+Memoria;Samsung;32 GB;21000
+Billentyuzet;Asus;Membrán;125
+GPU;Gigabyte;24 b;20000
+Billentyuzet;xy;black;15000
+Alaplap;Asus;asdafdg,SGFG;3265461Ft
+Alaplap;fhdlkj;jjjjj;10000
