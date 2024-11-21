@@ -90,7 +90,7 @@ nav{
         .elem{
             background-color: var(--nav);
             font-size: var(--nav_items);
-            width: 120px;
+            padding: 5px 10px;
             height: 4vh;
             border-radius: 15px;
             display: flex;

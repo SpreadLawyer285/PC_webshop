@@ -9,6 +9,7 @@ body{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -115,13 +116,13 @@ nav{
         .elem{
             background-color: var(--nav);
             font-size: var(--nav_items);
-            width: 120px;
             height: 4vh;
             border-radius: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: 0.5s;
+            padding: 5px 10px;
         }
 
         .elem:hover{
@@ -141,14 +142,14 @@ main{
     width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     animation: slideInBottom 0.8s;
     #side_bar{
         box-sizing: border-box;
         z-index: 99;
         opacity: 0;
-        width: 12vw;
+        width: 250px;
         height: 100%;
     
         background-color: var(--gunmetal);
@@ -173,37 +174,38 @@ main{
     #alkatreszek{
         width: 100%;
         height: 100%;
-        background-color: var(--rich_black);
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        
-        hr{
-            border: 3px solid var(--rich_black);
-            border-radius: 50px;
-        }
+        padding: 50px;
+        color: white;
+        overflow-x: hidden;
 
-        .alkatresz{
+        .group {
+            margin-bottom: 20px;
             width: 100%;
-            height: 220vh;
-            background-color: var(--rich_black);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 30px;
-            margin-bottom: 100px;
-            
-            div{
-                width: 90%;
-                height: 40vh;
-                background-color: var(--mint_cream);
-                border-radius: 30px;
-                box-shadow: 10px 10px 1px var(--box_shadow);
-            }
         }
-
-        .alkatresz:last-child{
-            margin-bottom: 0;
+        
+        .part {
+            display: flex;
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .image img {
+            max-width: 150px;
+            max-height: 150px;
+            object-fit: cover;
+        }
+        
+        .details {
+            flex: 1;
+            margin-left: 15px;
+        }
+        
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
+    
 }
