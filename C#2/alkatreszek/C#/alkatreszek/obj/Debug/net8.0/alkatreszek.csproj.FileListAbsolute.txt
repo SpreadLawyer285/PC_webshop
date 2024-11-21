@@ -12,3 +12,17 @@ C:\Users\meszar.mate\source\repos\alkatreszek\alkatreszek\obj\Debug\net8.0\refin
 C:\Users\meszar.mate\source\repos\alkatreszek\alkatreszek\obj\Debug\net8.0\alkatreszek.pdb
 C:\Users\meszar.mate\source\repos\alkatreszek\alkatreszek\obj\Debug\net8.0\alkatreszek.genruntimeconfig.cache
 C:\Users\meszar.mate\source\repos\alkatreszek\alkatreszek\obj\Debug\net8.0\ref\alkatreszek.dll
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.exe
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.deps.json
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.runtimeconfig.json
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.dll
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.pdb
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.AssemblyInfoInputs.cache
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.AssemblyInfo.cs
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.csproj.CoreCompileInputs.cache
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.dll
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\refint\alkatreszek.dll
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.pdb
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.genruntimeconfig.cache
+C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\ref\alkatreszek.dll

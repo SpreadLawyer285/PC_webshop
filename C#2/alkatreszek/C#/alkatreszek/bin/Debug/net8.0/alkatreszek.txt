@@ -1,6 +1,7 @@
-Memoria;Samsung;32 GB;21000
-Billentyuzet;Asus;Membrán;125
-GPU;Gigabyte;24 b;20000
-Billentyuzet;xy;black;15000
-Alaplap;Asus;asdafdg,SGFG;3265461Ft
-Alaplap;fhdlkj;jjjjj;10000
+Memoria;Samsung;32 GB;21000 Ft;0%
+Billentyuzet;Asus;Membrán;125 Ft;20%
+GPU;Gigabyte;24 Gb;20000 Ft;4%
+Billentyuzet;xy;black;15000 Ft;0%
+Alaplap;Asus;asdafdg,SGFG;3265461 Ft;3%
+Alaplap;fhdlkj;jjjjj;10000 Ft;0%
+Billentyuzet;kj;huihj;20000 Ft;80%
