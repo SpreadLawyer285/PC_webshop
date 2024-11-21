@@ -31,8 +31,29 @@ function showOptions(category){
 
     componentsData[category].forEach(item => {
         const li = document.createElement('li');
-        li.innerHTML = `${item.name}  ${item.price} Ft (${item.parameter}) <button onclick="addComponent('${category}', '${item.name}')">Hozzáadás</button>`;
+        const name_div = document.createElement('div')
+        const price_div = document.createElement('div')
+        const button = document.createElement('div')
+        const h3 = document.createElement('h3')
+        const h2 = document.createElement('h3')
+
+        name_div.classList.add('component-name')
+        price_div.classList.add('component-price')
+        button.classList.add('add-button')
+        
+
+        h3.innerHTML = `${item.name} processzor (${item.parameter})`
+        h2.innerHTML = `${item.price} Ft`
+        button.innerHTML = `<button onclick="addComponent('${category}', '${item.name}')">Hozzáadás</button>`
+        
+        
+        li.appendChild(name_div)
+        li.appendChild(price_div)
+        li.appendChild(button)
+        name_div.appendChild(h3)
+        price_div.appendChild(h2)
         optionsList.appendChild(li);
+        
     });
 
     modal.style.display = 'block';
