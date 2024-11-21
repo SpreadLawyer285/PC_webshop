@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meszar.mate\\source\\repos\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj": {}
+    "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meszar.mate\\source\\repos\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj": {
+    "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meszar.mate\\source\\repos\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
+        "projectUniqueName": "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
         "projectName": "alkatreszek",
-        "projectPath": "C:\\Users\\meszar.mate\\source\\repos\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
+        "projectPath": "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
         "packagesPath": "C:\\Users\\meszar.mate\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meszar.mate\\source\\repos\\alkatreszek\\C#\\alkatreszek\\obj\\",
+        "outputPath": "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\meszar.mate\\AppData\\Roaming\\NuGet\\NuGet.Config",

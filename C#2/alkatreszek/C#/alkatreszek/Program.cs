@@ -8,6 +8,7 @@ namespace alkatreszek
         public string nev;
         public string parameter;
         public int ar;
+        public int akcio;
 
         public Alkatresz(string sor)
         {
@@ -15,7 +16,10 @@ namespace alkatreszek
             tipus = adatok[0];
             nev = adatok[1];
             parameter = adatok[2];
-            ar = Int32.Parse(adatok[3].Substring(adatok[3].Length-2));
+            string[] arak = adatok[3].Split(" ");
+            ar = Int32.Parse(arak[0]);
+            string[] akciok = adatok[4].Split("%");
+            akcio = Int32.Parse(akciok[0]);
         }
     }
     internal class Program
@@ -69,7 +73,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void CPU()
         {
@@ -120,7 +124,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void Memoria()
         {
@@ -171,7 +175,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void GPU()
         {
@@ -222,7 +226,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void Hattertar()
         {
@@ -307,7 +311,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void Monitor()
         {
@@ -358,7 +362,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void Eger()
         {
@@ -409,7 +413,7 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
         static void Billentyuzet()
         {
@@ -460,12 +464,45 @@ namespace alkatreszek
                 }
             }
 
-            Fajlba_iras(tipus, nev, parameter, ar);
+            Akcio(tipus, nev, parameter, ar);
         }
-        static void Fajlba_iras(string tipus, string nev, string parameter, int ar)
+
+        static void Akcio(string tipus, string nev, string parameter, int ar)
+        {
+            bool megfelel = false;
+            int akcio = 0;
+            string irando = "";
+            Console.WriteLine("Akciós a termék? (i/n)");
+
+            string valasz = Console.ReadLine();
+
+            if (valasz == "i")
+            {
+                Console.WriteLine("Hány százalékos legyen?");
+
+                megfelel = false;
+                while (!megfelel)
+                {
+                    try
+                    {
+                        akcio = Int32.Parse(Console.ReadLine());
+                        megfelel = true;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Csak számot írhatsz be!");
+                    }
+                }
+            }
+            irando = tipus + ";" + nev + ";" + parameter + ";" + ar + " Ft" + ";" + akcio + "%";
+
+            Fajlba_iras(irando);
+        }
+
+        static void Fajlba_iras(string irando)
         {
             StringBuilder iras = new StringBuilder();
-            Console.WriteLine(tipus + ";" + nev + ";" + parameter + ";" + ar + "Ft" + " bekerült a fájlba!");
+            Console.WriteLine(irando + " bekerült a fájlba!");
 
 
             Console.WriteLine("Szeretnél még alkatrészeket hozzáadni? [i/n]");
@@ -473,13 +510,13 @@ namespace alkatreszek
 
             if (valasz == "i")
             {
-                iras.AppendLine(tipus + ";" + nev + ";" + parameter + ";" + ar + "Ft");
+                iras.AppendLine(irando);
                 File.AppendAllText("alkatreszek.txt", iras.ToString());
                 Bevitel();
             }
             if (valasz == "n")
             {
-                iras.AppendLine(tipus + ";" + nev + ";" + parameter + ";" + ar + "Ft");
+                iras.AppendLine(irando);
                 File.AppendAllText("alkatreszek.txt", iras.ToString());
                 Main();
             }
@@ -556,7 +593,274 @@ namespace alkatreszek
 
         static void TipusKereses()
         {
-            Console.WriteLine("Milyen típusú alkatrészre szeretne keresni?\n-----------------------\n1.Alaplap\n2.Processzor\n3.Memória\n4.Videókártya\n5.Háttértár\n6.Monitor\n7.Egér\n8.Billentyűzet\n9.Kilépés\n-----------------------");
+            int valasztas = 0;
+            bool megfelel = false;
+
+            int osszesen = 0;
+
+            Console.WriteLine("Milyen típusú alkatrészre szeretne keresni?\n-----------------------\n1.Alaplap\n2.Processzor\n3.Memória\n4.Videókártya\n5.HDD\n6.SSD\n7.Monitor\n8.Egér\n9.Billentyűzet\n10.Vissza\n-----------------------");
+
+            megfelel = false;
+            while (!megfelel)
+            {
+                try
+                {
+                    valasztas = Int32.Parse(Console.ReadLine());
+                    if (valasztas > 0 && valasztas < 11)
+                    {
+                        megfelel = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nem értelmezhető választás!");
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Nem értelmezhető választás!");
+                }
+            }
+
+            bool van = false;
+            switch (valasztas)
+            {
+                case 1:
+                    van = false;
+                    Console.WriteLine("Alaplapok:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "Alaplap")
+                        {
+                            osszesen++;
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető alaplapjaink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 2:
+                    van = false;
+                    Console.WriteLine("Processzorok:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "CPU")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető processzoraink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 3:
+                    van = false;
+                    Console.WriteLine("Memóriák:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "Memoria")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető Memóriáink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 4:
+                    van = false;
+                    Console.WriteLine("Videókártyák:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "GPU")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető videókártyáink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 5:
+                    van = false;
+                    Console.WriteLine("HHD-k:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "HDD")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető HHD-k!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 6:
+                    van = false;
+                    Console.WriteLine("SSD-k:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "SSD")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető SSD-k!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 7:
+                    van = false;
+                    Console.WriteLine("Monitorok:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "Monitor")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető Monitoraink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 8:
+                    van = false;
+                    Console.WriteLine("Egerek:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "Eger")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető Egereink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 9:
+                    van = false;
+                    Console.WriteLine("Billentyűzetek:\n-----------------------");
+                    foreach (var alkatresz in alkatreszek)
+                    {
+                        if (alkatresz.tipus == "Billentyuzet")
+                        {
+                            van = true;
+                            Console.WriteLine("\n" + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                        }
+                    }
+                    if (!van)
+                    {
+                        Console.WriteLine("Nincsenek elérhető Billentyűzeteink!");
+                        TipusKereses();
+                    }
+                    Console.WriteLine("-----------------------");
+                    break;
+
+                case 10:
+                    Kereses();
+                    break;
+            }
+            Main();
+        }
+
+        static void NevKereses()
+        {
+            Console.WriteLine("Írja be az adott alkatrész nevét:\n-----------------------");
+            string valasztas = Console.ReadLine();
+            bool van = false;
+            foreach (var alkatresz in alkatreszek)
+            {
+                if (alkatresz.nev.ToLower().Contains(valasztas.ToLower()))
+                {
+                    van = true;
+                    Console.WriteLine(alkatresz.tipus + " | " + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft");
+                }
+            }
+            if (!van)
+            {
+                Console.WriteLine("Nincs ilyen nevű alkatrészünk!");
+                NevKereses();
+            }
+            Console.WriteLine("-----------------------");
+            Main();
+        }
+
+        static void ArKereses()
+        {
+            Console.WriteLine("Adja meg a minimum árat:");
+            int min = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Adja meg a maximum árat:");
+            int max = Int32.Parse(Console.ReadLine());
+
+            bool van = false;
+            foreach (var alkatresz in alkatreszek)
+            {
+                if (alkatresz.ar >= min && alkatresz.ar <= max)
+                {
+                    van = true;
+                    Console.WriteLine(alkatresz.tipus + " | " + alkatresz.nev + " | " + alkatresz.parameter + " | " + alkatresz.ar + " Ft" );
+                }
+            }
+            if (!van)
+            {
+                Console.WriteLine("Nincs alkatrész ennyi pénzért!");
+                ArKereses();
+            }
+            Main();
+        }
+
+        static void AkcioKereses()
+        {
+            Console.WriteLine("Ezek az akciós termékeink");
+
+            foreach (var alkatresz in alkatreszek)
+            {
+                if (alkatresz.akcio != 0)
+                {
+                    Console.WriteLine(alkatresz.akcio + "%\t" + alkatresz.tipus + "|" + alkatresz.nev + "|" + alkatresz.parameter + "|" + alkatresz.ar + " Ft");
+                }
+            }
         }
 
         static void Kereses()
@@ -598,15 +902,16 @@ namespace alkatreszek
             switch (valasztas)
             {
                 case 1:
-                    Bevitel();
+                    TipusKereses();
                     break;
                 case 2:
-                    Kereses();
+                    NevKereses();
                     break;
                 case 3:
-                    Environment.Exit(0);
+                    ArKereses();
                     break;
                 case 4:
+                    AkcioKereses();
                     break;
             }
         }
