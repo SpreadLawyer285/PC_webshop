@@ -1,82 +1,89 @@
-// Adatok betöltése egy TXT-fájlból
-fetch('parts.txt') // A fájl elérési útja
-    .then(response => response.text())
-    .then(data => processParts(data)) // Az adatok feldolgozása
-    .catch(error => console.error('Hiba a fájl betöltésekor:', error));
+// A checkboxok azonosítói
+const checkboxes = {
+    CPU: "cpuCheckbox",
+    GPU: "gpuCheckbox",
+    SSD: "ssdCheckbox",
+    HDD: "hddCheckbox",
+    Motherboard: "alaplapCheckbox",
+    RAM: "memoriaCheckbox",
+    Mouse: "egerCheckbox",
+    Keyboard: "billentyuzetCheckbox",
+    Monitor: "monitorCheckbox",
+};
 
+// Az alkatrészek szekció
+const alkatreszekContainer = document.getElementById("alkatreszek");
 
-    function processParts(partsData) {
-        // Alkatrészek feldolgozása
-        const parts = partsData.trim().split('\n').map(line => {
-            const [type, name, price, details] = line.split(';');
-            return { type, name, price: parseInt(price, 10), details };
+// Adatok betöltése és szűrő hozzáadása
+fetch("formatted_computer_parts.txt")
+    .then((response) => response.text())
+    .then((data) => {
+        const alkatreszek = parseData(data);
+        renderAlkatreszek(alkatreszek);
+        addFilterListeners(alkatreszek);
+    })
+    .catch((error) => console.error("Hiba az adatok betöltésekor:", error));
+
+// Adatok feldolgozása
+function parseData(data) {
+    const lines = data.split("\n").filter((line) => line.trim() !== "");
+    return lines.map((line) => {
+        const [type, name, brandAndType, price] = line.split(";");
+        return { type, name, brandAndType, price };
+    });
+}
+
+// Alkatrészek megjelenítése
+function renderAlkatreszek(alkatreszek) {
+    alkatreszekContainer.innerHTML = ""; // Előző tartalom törlése
+    alkatreszek.forEach(({ type, name, brandAndType, price }) => {
+        const div = document.createElement("div");
+        div.classList.add("alkatresz");
+        div.dataset.type = type;
+
+        // Hozzáadás az alkatrész div-hez
+        div.innerHTML = `
+            <div class="first">
+                <img src="kepek/${name.replace(/ /g, "_")}.jpg" alt="${name}">
+                <div class="info">
+                    <h3>${name}</h3>
+                    <p>${brandAndType}</p>
+                    <p>${price} Ft</p>
+                </div>
+                <button>Részletek</button>
+            </div>
+            <div class="detailed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula est at elit scelerisque, a fermentum orci varius.
+            </div>
+        `;
+
+        // Gomb esemény hozzáadása
+        const button = div.querySelector("button");
+        button.addEventListener("click", () => {
+            div.classList.toggle("expanded");
         });
-    
-        // Adatok szűrése és csoportosítása
-        const groupedByType = groupBy(parts, 'type');
-        const groupedByBrand = groupBy(parts, part => part.name.split(' ')[0]); // Márka az első szó
-        const sortedByPrice = [...parts].sort((a, b) => a.price - b.price); // Ár szerint növekvő sorrend
-    
-        // Megjelenítés
-        displayParts(groupedByType, 'type');
-        console.log('Csoportosítás márka szerint:', groupedByBrand);
-        console.log('Ár szerint növekvő:', sortedByPrice);
-    }
-    
-    // Helper függvény csoportosításhoz
-    function groupBy(array, key) {
-        return array.reduce((result, item) => {
-            const groupKey = typeof key === 'function' ? key(item) : item[key];
-            if (!result[groupKey]) result[groupKey] = [];
-            result[groupKey].push(item);
-            return result;
-        }, {});
-    }
-    
 
-    function displayParts(groupedParts, groupBy) {
-        const alkatreszekSection = document.getElementById('alkatreszek');
-        alkatreszekSection.innerHTML = '';
-    
-        Object.keys(groupedParts).forEach(group => {
-            const groupDiv = document.createElement('div');
-            groupDiv.id = group.toLowerCase();
-            groupDiv.classList.add('group');
-            groupDiv.innerHTML = `<h3>${group} (${groupBy})</h3>`;
-    
-            groupedParts[group].forEach(part => {
-                const partDiv = document.createElement('div');
-                partDiv.classList.add('part');
-    
-                const imageDiv = document.createElement('div');
-                imageDiv.classList.add('image');
-                imageDiv.innerHTML = `<img src="images/${part.name.replace(/\s+/g, '_').toLowerCase()}.jpg"}">`;
-    
-                const detailsDiv = document.createElement('div');
-                detailsDiv.classList.add('details');
-                detailsDiv.innerHTML = `
-                    <h4>${part.name}</h4>
-                    <p>Ár: ${part.price} Ft</p>
-                    <p>${part.details}</p>
-                `;
-    
-                const buttonDiv = document.createElement('div');
-                buttonDiv.classList.add('button');
-                const button = document.createElement('button');
-                button.textContent = 'További részletek';
-                button.addEventListener('click', () => {
-                    alert(`Részletek:\nNév: ${part.name}\nÁr: ${part.price} Ft\n${part.details}`);
-                });
-                buttonDiv.appendChild(button);
-    
-                partDiv.appendChild(imageDiv);
-                partDiv.appendChild(detailsDiv);
-                partDiv.appendChild(buttonDiv);
-                groupDiv.appendChild(partDiv);
-            });
-    
-            alkatreszekSection.appendChild(groupDiv);
+        alkatreszekContainer.appendChild(div);
+    });
+}
+
+// Szűrő hozzáadása
+function addFilterListeners(alkatreszek) {
+    Object.values(checkboxes).forEach((checkboxId) => {
+        const checkbox = document.getElementById(checkboxId);
+        checkbox.addEventListener("change", () => {
+            const selectedTypes = getSelectedTypes();
+            const filtered = selectedTypes.length
+                ? alkatreszek.filter((item) => selectedTypes.includes(item.type))
+                : alkatreszek;
+            renderAlkatreszek(filtered);
         });
-    }
-    
-    
+    });
+}
+
+// Kiválasztott típusok lekérése
+function getSelectedTypes() {
+    return Object.keys(checkboxes).filter(
+        (type) => document.getElementById(checkboxes[type]).checked
+    );
+}

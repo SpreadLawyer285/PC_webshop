@@ -1,0 +1,47 @@
+CPU;Intel Core i9;Intel Desktop;197996 HUF
+CPU;AMD Ryzen 9;AMD Desktop;179996 HUF
+CPU;Intel Core i5;Intel Laptop;89996 HUF
+CPU;AMD Ryzen 5;AMD Laptop;71996 HUF
+CPU;Apple M2;Apple Laptop;359996 HUF
+
+GPU;NVIDIA RTX 4090;NVIDIA Desktop;575996 HUF
+GPU;AMD Radeon RX 7900 XT;AMD Desktop;323996 HUF
+GPU;NVIDIA RTX 4060;NVIDIA Laptop;179996 HUF
+GPU;Intel Arc A770;Intel Desktop;118796 HUF
+GPU;AMD Radeon RX 7600;AMD Desktop;97196 HUF
+
+RAM;Corsair Vengeance 16GB;Corsair Desktop;28796 HUF
+RAM;Kingston Fury 32GB;Kingston Desktop;46796 HUF
+RAM;Crucial 8GB;Crucial Laptop;14396 HUF
+RAM;G.Skill Ripjaws 64GB;G.Skill Desktop;107996 HUF
+RAM;Samsung DDR5 16GB;Samsung Laptop;35996 HUF
+
+Motherboard;ASUS ROG Strix Z790;ASUS Desktop;143996 HUF
+Motherboard;MSI MPG B650;MSI Desktop;89996 HUF
+Motherboard;Gigabyte AORUS X670E;Gigabyte Desktop;118796 HUF
+Motherboard;ASRock Phantom Gaming 4;ASRock Desktop;50396 HUF
+Motherboard;Intel NUC Board NUC11;Intel Laptop;71996 HUF
+
+SSD;Samsung 980 Pro 1TB;Samsung SSD;43196 HUF
+HDD;WD Black SN850X 2TB;Western Digital SSD;82796 HUF
+HDD;Seagate Barracuda 4TB;Seagate HDD;32396 HUF
+SSD;Crucial P5 Plus 500GB;Crucial SSD;21596 HUF
+HDD;Toshiba X300 6TB;Toshiba HDD;50396 HUF
+
+Mouse;Logitech MX Master 3;Logitech Wireless;35996
+Mouse;Razer DeathAdder V3;Razer Wired;23996
+Mouse;SteelSeries Rival 5;SteelSeries Wired;19996
+Mouse;Corsair Dark Core RGB;Corsair Wireless;29996
+Mouse;Microsoft Bluetooth Ergonomic;Microsoft Wireless;18996
+
+Keyboard;Logitech G Pro X;Logitech Mechanical;49996
+Keyboard;Razer Huntsman Elite;Razer Optical;71996
+Keyboard;SteelSeries Apex Pro;SteelSeries Mechanical;64996
+Keyboard;Corsair K95 RGB Platinum;Corsair Mechanical;79996
+Keyboard;Microsoft Surface Keyboard;Microsoft Membrane;25996
+
+Monitor;Dell UltraSharp U2723QE;Dell 27-inch 4K;239996
+Monitor;LG UltraGear 34GN850-B;LG 34-inch UltraWide;319996
+Monitor;Samsung Odyssey G7;Samsung 32-inch QHD;279996
+Monitor;ASUS TUF Gaming VG27AQ;ASUS 27-inch QHD;199996
+Monitor;BenQ PD3220U;BenQ 32-inch 4K;299996

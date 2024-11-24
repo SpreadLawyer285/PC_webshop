@@ -178,34 +178,90 @@ main{
         color: white;
         overflow-x: hidden;
 
-        .group {
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        
-        .part {
+        .alkatresz {
             display: flex;
-            border: 2px solid #ccc;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border: 3px solid var(--box_shadow);
+            margin: 10px;
             padding: 10px;
-            margin: 10px 0;
+            border-radius: 5px;
+            background-color: var(--gunmetal);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .image img {
-            max-width: 150px;
-            max-height: 150px;
-            object-fit: cover;
-        }
-        
-        .details {
-            flex: 1;
-            margin-left: 15px;
-        }
-        
-        .button {
+
+        .first{
             display: flex;
+            justify-content: space-evenly;
             align-items: center;
-            justify-content: center;
+            width: 100%;
+
+            div{
+                padding: 0px 20px;
+            }
         }
+        
+        .alkatresz img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .alkatresz .info {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .alkatresz button {
+            align-self: flex-start;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .alkatresz button:hover {
+            background-color: #0056b3;
+        }
+        
+        .detailed {
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #eef;
+            border: 1px solid #aad;
+            border-radius: 5px;
+            font-style: italic;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .alkatresz.expanded {
+            height: auto;
+        }
+        
+        .alkatresz.expanded .detailed {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        
+        
     }
     
 }
