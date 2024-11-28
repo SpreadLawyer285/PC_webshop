@@ -1,0 +1,145 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--rich_black);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight{
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInBottom{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInHr{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+        border: 2px solid var(--mint_cream);
+        border-radius: 5px;
+    }
+}
+
+@keyframes sectionTitle {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes fade-in {
+    to { scale: 1; opacity: 1;}
+}
+
+:root{
+    --light_blue: #93B7BE;
+    --mint_cream: #F1FFFA;
+    --gunmetal: #1B2432;
+    --rich_black: #121420;
+    --nav: rgb(36, 34, 61);
+    --box_shadow: rgb(78, 29, 170);
+
+    --title_size: 2rem;
+    --nav_items: 1.4rem; 
+    --leiras: 1.6rem;
+    --text_size: 1.2rem;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    background-color: var(--nav);
+    color: white;
+    animation: slideIn 0.8s;
+    z-index: 100;
+
+    #cim{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #elemek{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .elem{
+            background-color: var(--nav);
+            font-size: var(--nav_items);
+            height: 4vh;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            padding: 5px 10px;
+        }
+
+        .elem:hover{
+            transition: 0.5s;
+            box-shadow: 0px 0px 20px var(--mint_cream);
+        }
+    }
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.15s;
+}
+
+#osszh_elemek{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
