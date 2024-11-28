@@ -39,7 +39,7 @@ function showOptions(category){
 
         name_div.classList.add('component-name')
         price_div.classList.add('component-price')
-        button.classList.add('add-button')
+        button.setAttribute('id', 'add-button')
         
 
         h3.innerHTML = `${item.name} processzor (${item.parameter})`
@@ -64,8 +64,12 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function addComponent(category, name) {
-    console.log(`Hozzáadva: ${name} (${category})`);
+function addComponent(category, name, parameter) {
+    console.log(`Hozzáadva: ${name} (${category}) ${parameter}`);
+    const selectedDiv = document.getElementById(`selected-${category}`);
+    if (selectedDiv) {
+        selectedDiv.innerHTML = `<strong>${name} ${parameter}</strong> hozzáadva.`;
+    }
     closeModal();
 }
 
