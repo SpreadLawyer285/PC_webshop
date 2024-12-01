@@ -96,11 +96,11 @@ nav{
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.5s;
+            transition: 0.3s;
         }
 
         .elem:hover{
-            transition: 0.5s;
+            transition: 0.3s;
             box-shadow: 0px 0px 20px var(--mint_cream);
         }
     }

@@ -121,12 +121,12 @@ nav{
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.5s;
+            transition: 0.3s;
             padding: 5px 10px;
         }
 
         .elem:hover{
-            transition: 0.5s;
+            transition: 0.3s;
             box-shadow: 0px 0px 20px var(--mint_cream);
         }
     }
@@ -136,6 +136,10 @@ a{
     color: white;
     text-decoration: none;
     transition-duration: 0.15s;
+}
+
+.hidden{
+    display: none;
 }
 
 main{
@@ -244,6 +248,7 @@ main{
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            margin: 10px;
         }
         
         .alkatresz button:hover {
