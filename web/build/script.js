@@ -44,7 +44,7 @@ function showOptions(category){
 
         h3.innerHTML = `${item.name} processzor (${item.parameter})`
         h2.innerHTML = `${item.price} Ft`
-        button.innerHTML = `<button onclick="addComponent('${category}', '${item.name}')">Hozzáadás</button>`
+        button.innerHTML = `<button onclick="addComponent('${category}', '${item.name}', '${item.parameter}', '${item.price}Ft')">Hozzáadás</button>`
         
         
         li.appendChild(name_div)
@@ -64,11 +64,12 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function addComponent(category, name, parameter) {
+let addBtn = document.getElementsByClassName("add-comp")
+function addComponent(category, name, parameter, price) {
     console.log(`Hozzáadva: ${name} (${category}) ${parameter}`);
     const selectedDiv = document.getElementById(`selected-${category}`);
     if (selectedDiv) {
-        selectedDiv.innerHTML = `<strong>${name} ${parameter}</strong> hozzáadva.`;
+        selectedDiv.innerHTML = `<div class="selected-data"><h2>${name}</h2> <h4>(${parameter})</h4></div> <h2>${price}</h2>`;
     }
     closeModal();
 }

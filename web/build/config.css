@@ -206,6 +206,23 @@ main{
     width: 10%;
 }
 
+.selected-component{
+    width: 70%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-data h2, h4{
+    margin: 8px;
+}
+
 @media screen and (max-width: 500px){
     main{
         padding: 0 10px;
