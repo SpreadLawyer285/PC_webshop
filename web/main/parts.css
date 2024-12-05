@@ -255,7 +255,7 @@ main{
             background-color: #0056b3;
         }
         
-        .detailed {
+        #detailed {
             display: none;
             width: 100%;
             margin-top: 10px;
@@ -268,13 +268,6 @@ main{
             animation: fadeIn 0.3s ease;
         }
         
-        .alkatresz.expanded {
-            height: auto;
-        }
-        
-        .alkatresz.expanded .detailed {
-            display: block;
-        }
         
         @keyframes fadeIn {
             from {
