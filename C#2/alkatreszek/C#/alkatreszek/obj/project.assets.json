@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\meszar.mate\\.nuget\\packages\\": {}
+    "C:\\Users\\Matyi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
+      "projectUniqueName": "Y:\\Matyi-Rejtekhelye\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
       "projectName": "alkatreszek",
-      "projectPath": "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
-      "packagesPath": "C:\\Users\\meszar.mate\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\meszar.mate\\Downloads\\PC_webshop-main (1)\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\obj\\",
+      "projectPath": "Y:\\Matyi-Rejtekhelye\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\alkatreszek.csproj",
+      "packagesPath": "C:\\Users\\Matyi\\.nuget\\packages\\",
+      "outputPath": "Y:\\Matyi-Rejtekhelye\\PC_webshop-main\\C#2\\alkatreszek\\C#\\alkatreszek\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\meszar.mate\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
