@@ -27,13 +27,13 @@
     </nav>
     
     <main>
-    <h1>Gépösszerakó</h1>
+    <h1 id="title">Gépösszerakó</h1>
     <section class="components">
         <h3>Komponensek</h3>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Alaplap</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Alaplap')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
-
+            <div class="selected-component" id="selected-Alaplap"></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Processzor</h1></div>
@@ -43,45 +43,67 @@
         <div class="conf-block">
             <div class="conf-block-01"><h1>Memória</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Memoria')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-Memoria"></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Videókártya</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('GPU')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-GPU"></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>HDD</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('HDD')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-HDD"></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>SSD</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('SSD')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-SSD"></div>
         </div>
+        
+    </section>
+    
+    <section id="periferiak" class="components">
+        <h3>Perifériák</h3>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Monitor</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Monitor')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-Monitor"></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Egér</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Eger')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-Eger"></div>
         </div>
         <div class="conf-block">
             <div class="conf-block-01"><h1>Billentyűzet</h1></div>
             <div class="conf-block-02"><button class="add-comp" onclick="showOptions('Billentyuzet')">Hozzáadás <i class="fa-solid fa-plus"></i></button></div>
+            <div class="selected-component" id="selected-Billentyuzet"></div>
         </div>
     </section>
-    </main>       
+    <div class="buy">
+        <h2>Összesen: <span id="total-price">0 Ft</span></h2>
+        <button onclick="placeInCart()" id="add-cart" class="add-comp">Kosárba <i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
     
-    <div id="modal" >
+    </main>       
+
+    <div id="modal">
         <div class="top">
             <h2 id="modal-title"></h2>
-            <!-- <button onclick="closeModal()"></button> -->
+            <div id="search-area">
+                <input type="text" name="search" id="searchBox" placeholder="Keresés..." oninput="searchOptions()">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
             <button id='close' onclick="closeModal()">close</button>
         </div>
         <div class="modal-content">
             <ul id="options-list"></ul>
         </div>
         
-      </div>
+    </div>
       
     <script src="script.js"></script>
 </body>

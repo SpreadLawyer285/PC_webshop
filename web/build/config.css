@@ -59,13 +59,25 @@ a{
 
 main{
     padding: 0 80px;
+
+    #title{
+        width: 80%;
+        margin: auto;
+        padding: 20px 0 20px 0;
+    }
 }
+
+
 
 .components{
     padding: 0 20px;
     border: 1px solid rgb(173, 173, 173);
-    width: 100%;
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
 }
+
+
 
 .conf-block{
     display: flex;
@@ -124,14 +136,34 @@ main{
     transform: translate(-50%, -50%);
     background: white;
     padding: 20px;
+    padding-top: 0;
     border: 1px solid #ccc;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    overflow: hidden;
+    overflow: scroll;
 
     h2, button{
         margin: 0;
     }
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0; 
+    background-color: white; 
+    z-index: 10; 
+    padding: 20px;
+    border-bottom: 1px solid #ccc; 
+}
+
+.modal-content {
+    height: calc(100% - 50px); 
+    
+    padding: 10px;
+    background-color: white;
 }
 
 #modal ul{
@@ -143,7 +175,25 @@ main{
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
+}
+
+#add-button button{
+    font-weight: bold;
+    color: #4CCD99;
+    background-color: transparent;
+    border: 1px solid #4CCD99;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#add-button button:hover{
+    background-color: #4CCD99;
+    color: white;
+    transition: top 0.2s ease;
+    
 }
 
 #close {
@@ -180,47 +230,116 @@ main{
 	&:after { transform: rotate(-45deg); }
 }
 
-.top{
+#search-area{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+    
 }
 
-.modal-content {
-    height: calc(100% - 50px); /* A "top" sáv magasságának levonása */
-    overflow-y: auto; 
-    padding: 10px;
-    background-color: white;
+#searchBox{
+    margin: 0;
+    border: 2px solid #4CCD99;
+}
+
+#searchBox:focus{
+    outline: none;
+    border: 2px solid #4CCD99;
+}
+
+.searchButton{
+    width: 40px;
+    height: 36px;
+    border: 1px solid #4CCD99;
+    background: #4CCD99;
+    text-align: center;
+    color: #000000;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 #options-list li{
     border-bottom: 1px solid grey;
 }
 
-.component-name{
-    width: 80%;
-}
-
-.component-price{
-    width: 10%;
-}
 
 .selected-component{
     width: 70%;
-    margin-left: 50px;
+    padding-left: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
 }
 
-.selected-data{
+
+
+.component-row {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
 }
 
-.selected-data h2, h4{
-    margin: 8px;
+.component-info {
+    flex: 1; 
+    text-align: left;
+}
+
+.component-info h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.component-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.component-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: right;
+}
+
+.component-actions h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.component-actions button{
+    font-weight: bold;
+    color: #4CCD99;
+    background-color: transparent;
+    border: 1px solid #4CCD99;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.component-actions button:hover{
+    background-color: #4CCD99;
+    color: white;
+}
+
+.buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 100px;
+}
+
+.buy button{
+    width: 200px;
+    height: 50px;
 }
 
 @media screen and (max-width: 500px){

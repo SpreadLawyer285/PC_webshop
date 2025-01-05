@@ -1,7 +1,16 @@
-Memoria;Samsung;32 GB;21000 Ft;0%
-Billentyuzet;Asus;Membrán;125 Ft;20%
-GPU;Gigabyte;24 Gb;20000 Ft;4%
-Billentyuzet;xy;black;15000 Ft;0%
-Alaplap;Asus;asdafdg,SGFG;3265461 Ft;3%
-Alaplap;fhdlkj;jjjjj;10000 Ft;0%
-Billentyuzet;kj;huihj;20000 Ft;80%
+Alaplap;MSI PRO H610M-E DDR4;Maximum memória: 64 GB,Memória foglalat: DDR4;31000 Ft;0%
+Alaplap;GIGABYTE B760 Gaming X AX alaplap;Maximum memória: 128 GB,Memória foglalat: DDR5;73000 Ft;0%
+CPU;Intel Core i5-12400F processzor;Órajel (Mhz): 2500,Magok száma: 6;51599 Ft;0%
+CPU;AMD Ryzen 7 5800X processzor;Órajel (Mhz): 3800,Magok száma: 8;69900 Ft;0%
+Memoria;Kingston FURY Beast DIMM 2x8GB 3600MHz DDR4 memória;Kiszerelés (modul): 2,Kapacitás (GB): 16;20199 Ft;0%
+Memoria;Kingston FURY Renegade RGB 2x16GB 6400MHz DDR5 memória;Kiszerelés (modul): 2,Kapacitás (GB): 32;63599 Ft;0%
+GPU;GIGABYTE RTX 4060 Windforce OC 8G 8GB GDDR6 videokártya;GPU órajel (MHz): 2475,Mélység (mm): 192;149990 Ft;0%
+GPU;GIGABYTE RX 6600 Eagle 8G 8GB GDDR6 videokártya;GPU órajel (MHz): 1626,Mélység (mm): 282;113199 Ft;0%
+SSD;Samsung 1TB M.2 NVMe 2280 990 Pro;Kapacitás (TB): 1,Formátum: M.2 2280;46399 Ft;0%
+SSD;Samsung 870 EVO 500GB SATA SSD;Kapacitás (GB): 500,Csatolófelület: 2, 5" SATA;23299 Ft;0%
+Monitor;Acer Nitro KG242YEbmiix monitor;Képfrissítés (Hz): 100,Válaszidő(ms): 1;49900 Ft;0%
+Monitor;SAMSUNG 32" Odyssey G3 16:9 1ms gamer monitor;Képfrissítés(Hz): 165,Válaszidő(ms): 1;118599 Ft;0%
+Eger;LOGITECH G502 Lightspeed RGB Vezeték Nélküli Gaming Egér;Csatolófelület: USBCsatlakozás: vezeték nélküli;43798 Ft;0%
+Eger;Yenkee YMS 3002WE AURA EE GAMER EGÉR;Csatolófelület: USB,Csatlakozás: vezeték nélküli;17899 Ft;0%
+Billentyuzet;WhiteShark WAKIZASHI pink mechanikus gamer billentyűzet;Kapcsoló színe: kék,Gombok száma: 63;13399 Ft;0%
+Billentyuzet;Steelseries Apex Pro Mini UK vezeték nélküli gamer billentyűzet;Kapcsolók színe: piros,Gombok száma:63;97499 Ft;0%

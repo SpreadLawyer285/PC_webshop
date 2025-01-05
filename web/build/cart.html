@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosár</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <main>
+        <h1>Kosár</h1>
+        <div id="cart-items"></div>
+        <div id="order-summary">
+            <h2>Összesen: <span id="cart-total-price">0 Ft</span></h2>
+            <form id="order-form">
+                <h3>Adatok megadása:</h3>
+                <input type="text" id="name" placeholder="Név" required>
+                <input type="text" id="address" placeholder="Cím" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit" onclick="placeOrder()" id="submitBtn" class="add-comp">Rendelés leadása</button>
+            </form>
+        </div>
+    </main>
+    <script src="cart.js"></script>
+</body>
+</html>
