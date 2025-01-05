@@ -69,7 +69,7 @@ html{
 nav{
     height: 10vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0px 150px;
     background-color: var(--nav);
@@ -78,7 +78,7 @@ nav{
 
     #cim{
         font-size: 1.5rem;
-        cursor: pointer;
+        cursor: help;
     }
 
     #elemek{

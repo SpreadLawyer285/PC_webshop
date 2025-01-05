@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Alaplap;MSI PRO H610M-E DDR4;Maximum memória: 64 GB,Memória foglalat: DDR4;31000 Ft;0%
 Alaplap;GIGABYTE B760 Gaming X AX alaplap;Maximum memória: 128 GB,Memória foglalat: DDR5;73000 Ft;0%
 CPU;Intel Core i5-12400F processzor;Órajel (Mhz): 2500,Magok száma: 6;51599 Ft;0%
@@ -14,3 +15,14 @@ Eger;LOGITECH G502 Lightspeed RGB Vezeték Nélküli Gaming Egér;Csatolófelül
 Eger;Yenkee YMS 3002WE AURA EE GAMER EGÉR;Csatolófelület: USB,Csatlakozás: vezeték nélküli;17899 Ft;0%
 Billentyuzet;WhiteShark WAKIZASHI pink mechanikus gamer billentyűzet;Kapcsoló színe: kék,Gombok száma: 63;13399 Ft;0%
 Billentyuzet;Steelseries Apex Pro Mini UK vezeték nélküli gamer billentyűzet;Kapcsolók színe: piros,Gombok száma:63;97499 Ft;0%
+=======
+Alaplap;AL ASUS s1700 PRIME B760M-K D4 NEW i;Chipset típus: Intel B760,Formátum: Micro-ATX,Memória foglalat: DDR4,Memória órajel (MHz): 5333,Processzor foglalat: Intel 1700;40990 Ft;0%
+CPU;Intel Core i5-12400F;A PCI Expressz sávok maximális száma: 20,A processzor gyorsítótárának típusa: Smart Cache,A processzor mérete: 45 x 37.5,Alap órajel: 2,5 GHz;51599 Ft;20%
+Memoria;Kingston FURY Beast DIMM 2x16GB 3200MHz DDR4;Feszültség (V): 1,35,Időzítés (CL): 16,Kapacitás (GB): 32,Kiszerelés (modul): 2,Memória foglalat: DDR4,Memória órajel (MHz): 3200;30099 Ft;0%
+GPU;GIGABYTE RTX 4060 Ti Gaming OC 16G 16GB GDDR6;Csatolófelület: PCIe,DirectX verzió: 12,DisplayPort: 2 db,Foglalat: PCIe 4.0 x16,HDMI: 2 db;252899 Ft;15%
+HDD;Seagate Barracuda 8TB;Adattároló meghajtó puffer mérete: 256,Átmeneti tároló (cache): 256 MB,Csatlakozó típusa: SATA III (6GB/s),Folyamatos adatátviteli sebesség: 220,Tárolókapacitás:: 8TB;59900 Ft;0%
+SSD;Kingston A400 960GB;Adatátviteli sebesség: 6,Adatírási sebesség (MB/s): 450,Adatolvasási sebesség (MB/s): 500,Csatoló: SATA III,Energiafogyasztás: 1.50,KAPACITÁS: 960GB;23099 Ft;32%
+Monitor;AOC Gaming 165Hz IPS;Alap képméretarány: 16:9,Állítható magasság: Nem,Audio csatlakozók: Igen,Képfrissítési frekvencia: 165 Hz;53999 Ft;0%
+Eger;Razer DeathAdder Essential 2021;Csatlakozás típusa: Vezetékes,Ergonómikus kialakítás: Van,Érzékelő: Optikai,Érzékenység: 6400 dpi,Kábel hosszúság: 210,Súly: 96,Kivitel: Jobbkezes;10999 Ft;0%
+Billentyuzet;Genius SlimStar 126 billentyűzet;Bluetooth: Nem,Mechanikus switch: Nem,Megvilágítás: Nem,Nyelv: Magyar;3799 Ft;50%
+>>>>>>> 4baeeafbb0c90bd10afaa5c565dbf41b262ebd08

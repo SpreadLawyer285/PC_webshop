@@ -26,3 +26,17 @@ C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatresz
 C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.pdb
 C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.genruntimeconfig.cache
 C:\Users\meszar.mate\Downloads\PC_webshop-main (1)\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\ref\alkatreszek.dll
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.exe
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.deps.json
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.runtimeconfig.json
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.dll
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\bin\Debug\net8.0\alkatreszek.pdb
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.AssemblyInfoInputs.cache
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.AssemblyInfo.cs
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.csproj.CoreCompileInputs.cache
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.dll
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\refint\alkatreszek.dll
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.pdb
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\alkatreszek.genruntimeconfig.cache
+Y:\Matyi-Rejtekhelye\PC_webshop-main\C#2\alkatreszek\C#\alkatreszek\obj\Debug\net8.0\ref\alkatreszek.dll

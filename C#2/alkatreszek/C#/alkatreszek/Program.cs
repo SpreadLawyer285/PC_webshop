@@ -863,11 +863,8 @@ namespace alkatreszek
             }
         }
 
-        static void Kereses()
+        static void Beolvasas()
         {
-            int valasztas = 0;
-            bool megfelel = false;
-
             StreamReader sr = new StreamReader("alkatreszek.txt");
 
             string sor;
@@ -876,6 +873,14 @@ namespace alkatreszek
             {
                 alkatreszek.Add(new Alkatresz(sor));
             }
+
+            Main();
+        }
+
+        static void Kereses()
+        {
+            int valasztas = 0;
+            bool megfelel = false;
 
             Console.WriteLine("Mi alapján szeretnél keresni?\n-----------------------\n1.Típus\n2.Név\n3.Ár\n4.Akció\n-----------------------");
 
@@ -920,7 +925,7 @@ namespace alkatreszek
             int valasztas = 0;
             bool megfelel = false;
 
-            Console.WriteLine("Bevinni vagy keresni szeretne?\n-----------------------\n1.Bevitel\n2.Keresés\n3.Kilépés\n-----------------------");
+            Console.WriteLine("Bevinni vagy keresni szeretne?\n-----------------------\n1.Bevitel\n2.Beolvasás\n3.Keresés\n4.Kilépés\n-----------------------");
 
             megfelel = false;
             while (!megfelel)
@@ -928,7 +933,7 @@ namespace alkatreszek
                 try
                 {
                     valasztas = Int32.Parse(Console.ReadLine());
-                    if (valasztas > 0 && valasztas < 4)
+                    if (valasztas > 0 && valasztas < 5)
                     {
                         megfelel = true;
                     }
@@ -948,9 +953,12 @@ namespace alkatreszek
                     Bevitel();
                     break;
                 case 2:
-                    Kereses();
+                    Beolvasas();
                     break;
                 case 3:
+                    Kereses();
+                    break;
+                case 4:
                     Environment.Exit(0);
                     break;
             }
