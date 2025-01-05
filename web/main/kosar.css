@@ -2,14 +2,13 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background-color: var(--rich_black);
 }
 
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html{
@@ -19,7 +18,7 @@ html{
 @keyframes slideIn{
     from{
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-200px);
     }
 
     to{
@@ -42,7 +41,7 @@ html{
 @keyframes slideInBottom{
     from{
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(200px);
     }
 
     to{
@@ -83,7 +82,6 @@ html{
     --gunmetal: #1B2432;
     --rich_black: #121420;
     --nav: rgb(36, 34, 61);
-    --box_shadow: rgb(78, 29, 170);
 
     --title_size: 2rem;
     --nav_items: 1.4rem; 
@@ -117,16 +115,22 @@ nav{
             background-color: var(--nav);
             font-size: var(--nav_items);
             height: 4vh;
-            border-radius: 15px;
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.5s;
+            transition: 0.3s;
             padding: 5px 10px;
+            gap: 5px;
+
+
+            img{
+                width: 30px;
+            }
         }
 
         .elem:hover{
-            transition: 0.5s;
+            transition: 0.3s;
             box-shadow: 0px 0px 20px var(--mint_cream);
         }
     }
@@ -138,26 +142,72 @@ a{
     transition-duration: 0.15s;
 }
 
-#osszh_elemek{
-    width: 100%;
-    height: auto;
-    padding: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+main{
+    margin: auto;
+    background-color: #1B2432;
+    margin: 30px;
+    padding: 20px;
+    min-height: 10vh;
     animation: slideInBottom 0.8s;
+}
+
+footer{
+    margin: auto;
+    background-color: #1B2432;
+    margin: 30px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideInBottom 0.8s;
+}
+
+.cart-item {
+    min-height: 70px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 
     div{
-        width: clamp(300px, 30vw, 500px);
-        padding: 20px;
-        min-height: 300px;
-        background-color: var(--light_blue);
-        border-radius: 20px;
-        margin: 20px;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        gap: 20px;
         align-items: center;
+
+        h3{
+            font-size: 1.7rem;
+        }
+
+        .details{
+            display: none;
+        }
+
+        .compare-btn{
+            display: none;
+        }
     }
+}
+
+button.remove-item {
+    background-color: #f03e3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.clear-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
 }

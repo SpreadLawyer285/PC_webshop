@@ -123,6 +123,12 @@ nav{
             align-items: center;
             transition: 0.3s;
             padding: 5px 10px;
+            gap: 5px;
+
+
+            img{
+                height: 25px;
+            }
         }
 
         .elem:hover{
