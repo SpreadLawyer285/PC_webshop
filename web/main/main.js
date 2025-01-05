@@ -32,11 +32,11 @@ function parseData(data) {
     });
 }
 
-let selectedItems = []; // Az összehasonlítandó elemek
-let selectedType = null; // A kiválasztott típus
+let selectedItems = []; 
+let selectedType = null; 
 
 function renderAlkatreszek(alkatreszek) {
-    alkatreszekContainer.innerHTML = ""; // Tartalom törlése
+    alkatreszekContainer.innerHTML = "";
 
     const grouped = alkatreszek.reduce((groups, item) => {
         if (!groups[item.type]) {
@@ -58,7 +58,7 @@ function renderAlkatreszek(alkatreszek) {
 
             itemDiv.innerHTML = `
                 <div class="first">
-                    <img src="kepek/${name.replace(/ /g, "_")}.jpg" alt="${name}">
+                    <img src="" alt="${name}">
                     <div class="info">
                         <h3>${name}</h3>
                         <p>${brandAndType}</p>
@@ -100,12 +100,10 @@ function renderAlkatreszek(alkatreszek) {
             compareButton.addEventListener("click", () => {
                 compareButton.style.backgroundColor = "lightgreen"
                 if (selectedItems.length === 0) {
-                    // Az első elem kiválasztásakor mentjük a típust
                     selectedItems.push({ type, name, brandAndType, price });
                     selectedType = type;
                     updateCompareButtonVisibility();
                 } else if (selectedItems.length < 2) {
-                    // Ellenőrizzük, hogy azonos típusú-e
                     if (type === selectedType) {
                         selectedItems.push({ type, name, brandAndType, price });
                         updateCompareButtonVisibility();
@@ -221,30 +219,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartSpan = document.querySelector("#elemek .elem span");
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-    // Kezdetben rejtjük a span-t, ha nincs termék
     updateCartSpanVisibility();
 
-    // Frissítjük a számlálót
     cartCount.textContent = cartItems.length;
 
     document.body.addEventListener("click", (e) => {
         if (e.target.classList.contains("kosarba")) {
             const itemDiv = e.target.closest(".alkatresz");
 
-            // Az elem klónozása az osztályokkal és ID-kkal együtt
             const clonedDiv = itemDiv.cloneNode(true);
 
-            // Eltávolítjuk a „Kosárba” gombot a másolatról
             const kosarbaButton = clonedDiv.querySelector(".kosarba");
             if (kosarbaButton) kosarbaButton.remove();
 
-            // Hozzáadunk egy eltávolítás gombot
             const removeButton = document.createElement("button");
             removeButton.textContent = "Eltávolítás";
             removeButton.classList.add("remove-item");
             clonedDiv.appendChild(removeButton);
 
-            // Adatmentés a localStorage-ba
             const itemData = {
                 html: clonedDiv.outerHTML,
                 price: parseInt(itemDiv.querySelector(".info p:last-child").textContent.replace(/\D/g, ""), 10),
@@ -253,7 +245,6 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItems.push(itemData);
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-            // Frissítjük a számlálót és a span láthatóságát
             cartCount.textContent = cartItems.length;
             updateCartSpanVisibility();
         }
