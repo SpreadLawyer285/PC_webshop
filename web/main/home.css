@@ -9,6 +9,7 @@ body{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -115,24 +116,21 @@ header{
     width: 100%;
     height: 70vh;
     background-color: var(--rich_black);
-    display: grid;
-    grid-template-columns: 1fr 30vw 1fr 40vw 1fr;
-    grid-template-rows: 1fr 30vh 2vh 20vh 1fr;
-    column-gap: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 20px;
     animation: slideIn 0.8s;
-    margin-bottom: 100px;
 
     hr{
-        grid-column: 2;
-        grid-row: 3;
+        width: 100%;
         border: 2px solid var(--rich_black);
         border-radius: 5px;
         animation: slideInHr 0.8s forwards;
         animation-delay: 0.8s;
     }
     #kep{
-        grid-column: 4;
-        grid-row: 2 / 5;
+        width: 50%;
         background-color: var(--rich_black);
         border-radius: 20px;
         border: none;
@@ -143,24 +141,24 @@ header{
 
         video{
             border-radius: 20px;
+            width: 80%;
         }
     }
 
-    #cim{
-        grid-column: 2;
-        grid-row: 2;
-        color: white;
-        font-size: var(--title_size);
+    #first{
+        width: 50%;
+        #cim{
+            color: white;
+            font-size: clamp(25px, 2.5vw, 40px);
+        }
+    
+        #text{
+            color: white;
+            font-size: clamp(18px, 2vw, 25px);
+            text-align: justify;
+        }
     }
-
-    #text{
-        grid-column: 2;
-        grid-row: 4;
-        color: white;
-        font-size: var(--leiras);
-        text-align: justify;
     }
-}
 
 main{
     width: 100%;
@@ -183,7 +181,7 @@ main{
 
         h3{
             color: transparent;
-            font-size: var(--title_size);
+            font-size: clamp(20px, 3vw, 40px);
             text-shadow: -1px 1px 2px var(--mint_cream),
                          -1px 1px 2px var(--mint_cream),
                          -1px 1px 2px var(--mint_cream),
@@ -208,6 +206,7 @@ main{
             text-shadow: none;
             color: var(--mint_cream);
             transition: 0.5s;
+            font-size: clamp(30px, 5vw, 50px);
         }
     }
 }
@@ -228,4 +227,39 @@ footer{
     height: 800px;
     width: 100%;
     background-color: var(--light_blue);
+}
+
+@media (max-width: 1023px){
+    main{
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px 0px;
+
+        button{
+            width: 60vw;
+        }
+    }
+
+    header{
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 50px;
+
+        #first{
+            width: 80%;
+        }
+
+        #kep{
+            width: 80%;
+
+            video{
+                height: 100%;
+            }
+        }
+    }
+    
+    footer{
+        flex-direction: column;
+        padding: 5px 0;
+    }
 }

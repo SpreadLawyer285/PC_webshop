@@ -267,3 +267,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
+
+const but = document.getElementById("but")
+const hover_btn = document.getElementById("hover_btn")
+isToggledBtn = false;
+
+but.addEventListener("click", () => {
+    if (isToggled)
+    {
+        hover_btn.style.display = "none";
+    }
+    else
+    {
+        hover_btn.style.display = "flex";
+    }
+
+    isToggled = !isToggled;
+});
